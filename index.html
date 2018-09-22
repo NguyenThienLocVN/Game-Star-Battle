@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Game Instructions</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="JQuery/jquery-3.2.1.js"></script>
+</head>
+<body>
+	<main id="main">
+		<!-- background -->
+		<div id="gameBoard">
+			
+		</div>
+
+		<!-- content -->
+		<div class="content">
+			<h1 class="content-title">How to Play Star Battle.</h1>
+			<p class="content-text">
+				1. Move the spaceship using the sensible areas in the screen;<br>
+				2. The timer present the time lapsed;<br>
+				3. The fuel counter show the remain fuel;<br>
+				4. During the flight, the spaceship needs to destroy the asteroids and enemy spaceships that are presented in the space;<br>
+				5. You can shoot pressing Space Bar;<br>
+				6. If the spaceship hits a asteroid or another spaceship, you lose 10 points of fuel;<br>
+				7. Enemy spaceship needs 1 shot to be destroyed, you will get 5 points for each enemy destroyed;<br>
+				8. Asteroid needs 2 shots to be destroyed, you will get 10 points for each asteroid destroyed;<br>
+				9. If you destroy a friendly spaceship, you lose 10 points;<br>
+				10. During the flight, the spaceship needs to collect fuel in the space;<br>
+				11. You can pause the game clicking in a button pause, or pressing the letter "p";<br>
+				12. Go beyond all limits;<br>
+				<span class="content-slogan">Battle in Space with Star Battle Championship...</span>
+			</p>
+		</div>
+
+		<!-- button start -->
+		<div class="start">
+			<a href="gameBoard.html" class="button"> <div class="wave"></div> Start Game</a>
+		</div>
+	</main>
+	<script>
+		//center screen
+		$("#main").css('top', ($(window).height()-600)/2);
+	</script>
+</body>
+</html>

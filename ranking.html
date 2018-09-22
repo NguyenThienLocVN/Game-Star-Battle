@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Game Ranking</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="JQuery/jquery-3.2.1.js"></script>
+	<script src="js/ranking.js"></script>
+</head>
+<body>
+	<main id="main">
+		<!-- background -->
+		<div id="gameBoard">
+			
+		</div>
+
+		<!-- logo -->
+		<figure>
+			<img src="logo/logo-01.png" alt="logo" class="logo">
+		</figure>
+
+		<!-- ranking table -->
+		<div class="rank">
+			<table>
+				<tr>
+					<th>Position</th>
+					<th>Name</th>
+					<th>Score</th>
+					<th>Time</th>
+				</tr>
+			</table>
+		</div>
+
+		<!-- button start -->
+		<div class="start">
+			<a href="index.html" class="button"> <div class="wave"></div> Start Game</a>
+		</div>
+	</main>
+	<script>
+		//center screen
+		$("#main").css('top', ($(window).height()-600)/2);
+	</script>
+</body>
+</html>

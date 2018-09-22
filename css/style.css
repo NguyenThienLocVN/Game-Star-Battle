@@ -1,0 +1,376 @@
+/*===================Common=============*/
+body{
+	margin: 0 auto;
+	width: 1200px;
+	height: 600px;
+}
+#main{
+	position: relative;
+	width: 1200px;
+	height: 600px;
+}
+
+@keyframes aniBack{
+	100%{background-position: 100% 0%;}
+}
+#gameBoard{
+	position: relative;
+	width: 1200px;
+	height: 600px;
+	background: url('../images/background-2.jpg') no-repeat;
+	background-size: 150%;
+	overflow: hidden;
+	animation: aniBack 20s linear infinite;
+}
+@font-face{
+	font-family: abeezee;
+	src: url('../font/abeezee/ABeeZee-Regular.ttf');
+}
+@font-face{
+	font-family: acme;
+	src: url('../font/acme/Acme-Regular.ttf');
+}
+label,span{
+	font-family: abeezee;
+}
+
+
+/*============1. Instructions=============*/
+
+.content{
+	position: absolute;
+	top:0;
+	color:#fff;
+	left:3%;
+}
+@keyframes aniTitle{
+	100%{text-shadow: 5px 5px #ff0000;}
+}
+.content-title{
+	font-family: acme;
+	text-align: center;
+	animation: aniTitle 2s infinite;
+}
+
+@keyframes aniText{
+	0%{transform: scale(0);}
+	100%{transform: scale(1);}
+}
+.content-text{
+	font-family: abeezee;
+    font-size: 20px;
+    line-height: 27px;
+    animation: aniText 2s;
+}
+
+@keyframes aniSlogan{
+	100%{color:orange;}
+}
+.content-slogan{
+	animation: aniSlogan 1s infinite;
+}
+
+
+/*button*/
+.start{
+	position: absolute;
+	bottom: 3%;
+	left:calc(50% - 75px);
+}
+
+.button{
+	position: relative;
+	width: 150px;
+	height: 75px;
+	background: #99c;
+	border-radius: 5px;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	color:#fff;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.wave{
+	position: absolute;
+	top:0;
+	width: 75px;
+	height: 75px;
+	background: #fff;
+	opacity: 0.5;
+	left:calc(50% - 38px);
+	border-radius: 75px;
+	transform: scale(0);
+}
+
+
+.button:hover{
+	background: #241d4f;
+}
+@keyframes ripple{
+	100%{transform: scale(1);}
+}
+
+.button:active > .wave{
+	animation: ripple 2s;
+}
+
+
+/*===============Ranking=============*/
+.logo{
+	position: absolute;
+	top:0;
+	width: 150px;
+	left:calc(50% - 75px);
+}
+.rank{
+	position: absolute;
+	top:25%;
+	color:#fff;
+	display: inline-flex;
+	left:12%;
+}
+table{
+	border-collapse: collapse;
+	display: table-cell;
+	overflow-y: scroll;
+	max-height: 300px;
+}
+th, td{
+	width: 200px;
+	border:1px solid #fff;
+	padding: 15px;
+	text-align: center;
+}
+
+
+/*===================Game Board=============*/
+
+/*time*/
+.time{
+    position: absolute;
+    top: 0;
+    color: #fff;
+    left: 15%;
+}
+.time span{
+	position: relative;
+    left: 65px;
+    top: 22px;
+}
+
+/*score*/
+.score{
+	position: absolute;
+    color: #fff;
+    top: 4%;
+    left: 65%;
+}
+
+/*fuel counter*/
+.fuel{
+	position: absolute;
+    color: #fff;
+    top: 4%;
+    left: 78%;
+}
+.fuel div{
+	display: inline-flex;
+	width: 80px;
+	height: 20px;
+	background: blue;
+}
+.fuel span{
+	background: green;
+	text-align: center;
+}
+
+
+/*control */
+.keyLeft{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	opacity: 0.5;
+	z-index: 5;
+	left: 10px;
+	bottom: 70px;
+}
+.keyRight{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	opacity: 0.5;
+	z-index: 5;
+	left:130px;
+	bottom: 70px;
+}
+.keyDown{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	opacity: 0.5;
+	z-index: 5;
+	bottom: 20px;
+	left:70px;
+}
+.keyUp{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	opacity: 0.5;
+	z-index: 5;
+	left: 70px;
+	bottom: 120px;
+}
+
+.keyLeft:hover, .keyRight:hover, .keyDown:hover, .keyUp:hover {
+	opacity: 1;
+}
+
+
+/*pause*/
+.pause{
+    position: absolute;
+    bottom: 1%;
+    left: 49%;
+    cursor: pointer;
+}
+
+/*sound*/
+.sound{
+	position: absolute;
+    bottom: 1%;
+    left: 80%;
+    cursor: pointer;
+}
+
+/*font*/
+.font{
+    position: absolute;
+    bottom: 1%;
+    left: 86%;
+    cursor: pointer;
+}
+
+@keyframes aniShip{
+	100%{background: url('../02_Design/spaceship_2.png');}
+}
+
+
+
+/*main ship*/
+#ship{
+	position: relative;
+	background: url('../02_Design/spaceship_0.png');
+	animation: aniShip 0.5s infinite;
+	top:190px;
+}
+
+/*mainship fire*/
+.shoot_fire{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background: #fff;
+}
+
+/*enemy fire*/
+.enemy_fire{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background: red;
+}
+
+@keyframes aniAe{
+	0%{transform: scale(0.7);}
+	100%{transform: scale(1);}
+}
+
+/*add aestroid*/
+.aestroid{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	animation: aniAe 0.5s infinite;
+}
+
+.aestroid img{
+	width: 60px;
+	height: 60px;
+}
+
+@keyframes aniOtherShip{
+	100%{background-position: 240px 0px;}
+}
+/*add friendly*/
+.friendly{
+	position: absolute;
+	background: url('../images/ship_2.png');
+	background-size: cover;
+	width: 60px;
+	height: 60px;
+	animation: aniOtherShip steps(4) 1s infinite;
+}
+
+/*add enemy*/
+.enemy{
+	position: absolute;
+	background: url('../images/ship_3.png');
+	background-size: cover;
+	width: 60px;
+	height: 60px;
+	animation: aniOtherShip steps(4) 1s infinite;
+}
+
+
+@keyframes aniFuel{
+	0%{transform: rotate(-30deg);}
+	50%{transform: rotate(30deg);}
+	100%{transform: rotate(0deg);}
+}
+/*add fuel icon*/
+.fuel_icon{
+	position: absolute;
+	background: url('../02_Design/fuel-icon.png');
+	background-size: cover;
+	width: 60px;
+	height: 60px;
+	animation: aniFuel 1s infinite;
+}
+
+/*add planet*/
+@keyframes aniPlanet{
+	100%{transform: rotate(360deg);}
+}
+.planet{
+	position: absolute;
+	animation: aniPlanet 1s linear infinite;
+}
+
+
+
+#over{
+    position: absolute;
+    width: 200px;
+    text-align: center;
+    top: 25%;
+    left: calc(50% - 100px);
+    color: #fff;
+    animation: aniText 2s;
+}
+
+#over [type="submit"] {
+	border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background: orange;
+}
