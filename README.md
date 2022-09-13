@@ -4,6 +4,8 @@
 A minigame created by HTML, CSS & JS.
 Include instruction, sound effect & ranking score.
 
+Demo: https://nguyenthienlocvn.github.io/Game-Star-Battle/
+
 Screenshots:
 ![image](https://user-images.githubusercontent.com/22767172/177692882-1c936167-40ac-47ab-b638-4c6dc5ce539f.png)
 ![image](https://user-images.githubusercontent.com/22767172/177693215-e22fd07b-bccc-4661-b701-f501ccda62cb.png)
